@@ -1,0 +1,28 @@
+{
+  "name": "jsiot-workshop-slides",
+  "version": "1.0.0",
+  "description": "Slides for JS IOT workshop",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajfisher/jsiot-workshop-slides.git"
+  },
+  "keywords": [
+    "iot",
+    "johnny",
+    "five",
+    "nodebots"
+  ],
+  "author": "Andrew Fisher <ajfisher.td@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajfisher/jsiot-workshop-slides/issues"
+  },
+  "homepage": "https://github.com/ajfisher/jsiot-workshop-slides#readme",
+  "devDependencies": {
+    "grunt-cli": "^0.1.13"
+  }
+}
