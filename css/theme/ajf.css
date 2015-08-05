@@ -283,7 +283,8 @@ body {
 
 .reveal h1 {
   font-size: 2.77em;
-  padding: 0.3em;
+  margin-top: 0.8em;
+  padding: 0.5em 0.3em;
   display: inline-block;
   width: 67%;
   line-height: 1em;

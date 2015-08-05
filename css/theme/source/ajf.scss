@@ -80,7 +80,15 @@ $primaryGrey: rgb(63,63,63);
     background-color: $headingBackgroundColor;
 }
 
-.reveal h1 { font-size: $heading1Size; padding: 0.3em; display:inline-block; width: 67%; line-height: 1em; text-shadow: $heading1TextShadow;}
+.reveal h1 { 
+    font-size: $heading1Size; 
+    margin-top: 0.8em;
+    padding: 0.5em 0.3em;
+    display:inline-block; 
+    width: 67%; 
+    line-height: 1em; 
+    text-shadow: $heading1TextShadow;
+}
 .reveal h2 { font-size: $heading2Size;	padding: 0.3em; display: inline-block;}
 .reveal h3 { font-size: $heading3Size; padding: 0.3em;	display: inline-block;}
 .reveal h4 {font-size: $heading4Size; }
