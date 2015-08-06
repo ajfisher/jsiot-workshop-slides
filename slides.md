@@ -360,7 +360,7 @@ LED panels.
 
 ## Exercises:
 
-github.com/ajfisher/dddworkshop <!-- element class="bigtext" -->
+github.com/ajfisher/dddworkshop<!-- .element class="bigtext" -->
 
 Notes:
 
@@ -371,7 +371,7 @@ Each of the 3 exercises we'll do are in folders 1, 2 and 3 respectively in this
 repo. There's a readme in every folder, please follow along with that if you
 don't keep up for whatever reason.
 
-----
+---
 
 ### Exercise 1: Hello World
 <!-- .slide: data-background="/images/hello_world.jpg" -->
