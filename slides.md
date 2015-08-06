@@ -91,7 +91,7 @@ resistor to restrict the flow.
 
 ---
 
-## Microcontrollers
+### Microcontrollers
 
 // pic of arduino
 
@@ -107,7 +107,20 @@ interact with it in JS and we'll come to that in a moment.
 
 ---
 
-## Sensors and actuators (LEDs)
+### Breadboard
+
+// pic of breadboard
+
+Notes:
+
+So when you are prototyping it's a real drag to solder all the time. As such we
+use one of these, it's called a breadboard and it allows you to plug wires into
+it and make connections. It's not as secure as soldering but good enough and
+allows you to make mistakes.
+
+---
+
+### Sensors and actuators (LEDs)
 
 Notes:
 
@@ -310,23 +323,9 @@ Image (CC) [Matthew Bergman](7215764961901652://www.flickr.com/photos/matthewber
 
 Notes:
 
-With all this power, what sort of things can you build? Well I'm going to show
-you some examples of some fun things people have made and show you some code
-as well.
-
----
-
-### SimpleBot
-<!-- .slide: data-background="/images/simplebot.jpg" -->
-
-Simplebot (CC)<!-- .element: class="attribution" -->
-[AJ Fisher](https://twitter.com/ajfisher) 
-
-Notes:
-
-This is a basic teaching bot we use in Australia for nodebots events. Very
-basic and allows you to explore fundamentals of robotics design and motion. It
-is very cheap and fast to build so good for beginners.
+We're going to build some things in a second but here's a couple of things that
+people have been making which I thought I'd show you in order to hopefully
+inspire some further thinking on this front.
 
 ---
 
@@ -342,7 +341,6 @@ Notes:
 This skirt, made by Kassandra Perch is fully contained running javascript on a little board embedded into
 it. It has an accelerometer and as you move around the LEDs inside it light up
 different colour. So you can even use JavaScript in your clothing!!
-
 
 ---
 
@@ -360,22 +358,22 @@ LED panels.
 
 ---
 
-### Tharp
-<!-- .slide: data-background="/images/tharp.gif" -->
+## Exercises:
 
-(OSC)  <!-- .element: class="attribution" -->
-[dtex](https://github.com/dtex/tharp)
+github.com/ajfisher/dddworkshop <!-- element class="bigtext" -->
 
 Notes:
 
-Donovan Buck has done a lot of work on making sophisticated animation control
-in nodebots with a library to solve inverse kinematics problems. Here you 
-can see he has attached a 6-leg robot to a leap motion for hand control and it
-responds very very fast to his movement. 
+If you haven't already, please make sure you have downloaded or cloned this
+repo as we're about to get cracking in it for the rest of the session.
 
----
+Each of the 3 exercises we'll do are in folders 1, 2 and 3 respectively in this
+repo. There's a readme in every folder, please follow along with that if you
+don't keep up for whatever reason.
 
-### Hello World
+----
+
+### Exercise 1: Hello World
 <!-- .slide: data-background="/images/hello_world.jpg" -->
 
 (CC) Flickr <!-- .element: class="attribution" -->
@@ -383,17 +381,63 @@ responds very very fast to his movement.
 
 Notes:
 
-So now you've seen some examples, let's see a demonstration. With hardware you 
-most of the time don't have a screen. So a hello world example is just getting
-an LED to blink on and off.
+Okay so enough theory, it's time to get stuck in. The first exercise we are 
+going to do is to just make sure you understand the stack and have it all working.
+
+Hardware often doesn't have a screen so hello world is blinking an LED.
 
 ---
 
-## Exercise 1: hello world 15 mins
+### Exercise 1: Circuit
+
 - LED Circuit
-- put firmata on the board
-- JS example
-- test
+
+Notes:
+
+So the first thing I want you to do is grab an LED from your kit and you're
+going to put it into Pin 13 and ground like this circuit here. The long leg is
+the anode and it goes in Pin 13 and the short leg goes to ground.
+
+---
+
+### Exercise 1: Load firmata.
+
+- put firmata on the board (gif)
+
+Notes:
+
+Plug in your arduino and navigate to tools board and select Uno and then port
+and select something that looks like this. If you're on windows you'll need to check
+device manager.
+
+After that, select the firmware in the repo and hit upload from the sketch menu.
+
+That should all load as you can see me doing here. 
+
+---
+
+### Exercise 1: JS Code.
+
+```
+- show code example.
+```
+
+Notes:
+
+Now we have that, we need to talk to it from Johnny Five. You can see the code
+in the repo. Explain code here.
+
+---
+
+### Exercise 1: Run
+
+```
+node 1_hello_world/led.js
+```
+
+Notes: 
+
+Now run node and you should get a nice blinking LED.
 
 ---
 
