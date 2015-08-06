@@ -7,8 +7,11 @@ Andrew Fisher @ajfisher<!-- .element: class="author" -->
 
 Notes:
 
-Objective 2min
-- intro to building web connected things
+Hi, my name is Andrew Fisher and I'm an interaction developer and I also build
+hardware using JavaScript. Our workshop today is going to go for the two
+sessions, so just under two hours and the aim is that by the end of it all of
+you will have gone away having built something that interacts with the physical
+world using JS. 
 
 ---
 
@@ -20,6 +23,31 @@ Objective 2min
 
 Notes:
 
+Today, I've split things up so there's a bit of theory to get you familarised with the 
+stack and some fundamental electronics you're going to need to know and then really
+the majority of the time will be building stuff in a guided way with a focus on
+building something that is in the physical environment and is being actuated from
+a digital source and then reversing that and taking data from our environment
+and doing things with it. 
+
+---
+
+## Where are the droids?
+<!-- .slide: data-background="/images/droids.jpg" -->
+
+Notes:
+
+Now, for those that might know a bit about nodebots or have been to a nodebots session before, whilst we're
+using the nodebots stack (and I'll get into that in a moment), we won't be 
+building full scale robots today due to not much time. As such I felt that given
+there's some other topics at DDD around things like APIs, Microservices and IoT that this
+would be a great opportunity to show you that not only can you build robots
+with JS, but you can build IoT devices too and build them quickly and easily.
+
+So if you were here for the robotics and you're a bit disappointed we're not
+making battle bots this morning you've still got some time to go check out Troy's
+security workshop or learn about APIs.
+
 ---
 
 ## Introduction to electronics
@@ -27,6 +55,12 @@ Notes:
 // some sort of pic
 
 Notes:
+
+Okay so let's get cracking. We'll start with some basic electronics. Enough to
+get you by. Who here as done any electronics recently?
+
+A handful okay, so we'll quickly touch on the simple bits you need to know for
+today and where to find out more.
 
 ---
 
@@ -36,6 +70,25 @@ Notes:
 
 Notes:
 
+The easiest way to think about electronics is like water and pipes. The wires
+are pipes, the electrons or electricity is like water going through the pipes.
+
+Voltage then is like the pressure. So if you imagine I have a big tank or I turn
+on a mains tap there's a lot of pressure. So that's like having a powerful battery
+or plugging in the powerpoint. This is measured in volts. All the stuff we'll 
+use today is 5V which you can run from USB on your computer so won't kill you or
+really probably blow anything up.
+
+Current is the rate of flow of the electricity through the circuit. This is measured
+in Amps. If you have a big motor attached to the circuit you can imagine it would
+need more energy to turn it than a little LED. As such we say it draws a lot of
+current - thus makes a lot of flow of electricity.
+
+Finally we have resistance. Think of this like the width of the pipe. If it's
+narrow maybe you can't draw much electricity through it but if it's fat then 
+you can draw a lot. Some components may draw too much current so you use a
+resistor to restrict the flow.
+
 ---
 
 ## Microcontrollers
@@ -44,22 +97,71 @@ Notes:
 
 Notes:
 
+Okay - that's great, that's how electronics works in a circuit how do we affect it?
+
+So we typically use a microcontroller. A microcontroller is like a really old computer
+which you program in C and you can interact very directly with the circuit 
+you wire up to it. Today, the micro we'll use is called an Arduino which is
+open source hardware and very inexpensive. You can program it in C but you can
+interact with it in JS and we'll come to that in a moment.
+
 ---
 
-## Sensors and actuators
-
-LEDs, Servos, Motors, Temp, Buttons, Light
+## Sensors and actuators (LEDs)
 
 Notes:
+
+Now a microcontroller is just a tiny little computer, you need to plug things
+into it to do meaningful stuff. So the things we'll be playing around with 
+today are things like this. LEDs emit light. They come in different colours and
+one of them is even an RGB one which we'll use in the example.
+
+Note that LEDs are polar so the long leg is the anode or the positive side.
+
+---
+## Sensors and actuators (Motors)
+
+
+Notes:
+
+Next up we have motors, and specifically servos which are used to move things 
+normally thorugh 180° using a digital signal.
+
+---
+
+## Sensors and actuators (Temp)
+
+
+Notes:
+
+We'll be using a temperature sensor like this to record the temperature here
+in the space and use it. These are very useful as they are inexpensive and 
+remarkably accurate.
+
+
+---
+
+## Sensors and actuators (Light)
+
+
+Notes:
+
+And finally we have a light sensor which we'll use to measure light intensity.
 
 ---
 
 ## Resources
 
 * Arduino Experimenters Kit (ARDX)
-* Others
+* Make: Electronics (C. Platt)
+* Wikipedia (every component)
 
 Notes:
+
+There are a few resources you can go to to learn more about the basic electronics
+but if you're interested, the Arduino Experimenters kit is a great place to start
+as is the Make electronics book by Platt. Also Wikipedia has a frightening amount
+of info on every component ever made. 
 
 ---
 
@@ -71,9 +173,9 @@ Notes:
 
 Notes:
 
-That's enough of talking about why JS is really well suited to working with robotics.
-We all work with JavaScript and know it's a real and interesting language -
-Let's move on to what the hardware stack looks like.
+Okay so we're all software peeps so that's enough hardware to get you going. So
+how do we get JS working with this microcontroller that I said a moment ago
+can only use C.
 
 ---
 
@@ -177,7 +279,6 @@ most common electronics components you're likely to come across available in
 the framework and then you can use then to compose bigger objects that then
 represent your thing that you're making.
 
-
 ---
 
 ### Installation 
@@ -187,7 +288,7 @@ represent your thing that you're making.
 * npm install johnny-five
 * Write code
 * ...
-* Make an awesome robot
+* Make an awesome JS Hardware thing
 
 Notes:
 
@@ -320,7 +421,15 @@ an LED to blink on and off.
 * johnny-five.io
 * node-ardx.org
 * nodebotsau.io
+* @nodebotsau
 
+--- 
+
+## Get involved
+
+* NodeBots nights - 1st Wednesday every month
+* CCHS / Mack Melbourne - across the road
+* gitter.im/rwarldon/johnny-five
 
 ---
 
