@@ -53,7 +53,7 @@ security workshop or learn about APIs.
 
 ---
 
-## Intro to electronics
+## Electronics intro
 <!-- .slide: data-background="/images/electronics.jpg" -->
 
 (CC) <!-- .element: class="attribution" -->
@@ -164,6 +164,10 @@ normally thorugh 180° using a digital signal.
 ---
 
 ## Sensors and actuators (Temp)
+<!-- .slide: data-background="/images/temp.jpg" -->
+
+(CC) <!-- .element: class="attribution" -->
+[ajfisher](http://twitter.com/ajfisher)
 
 
 Notes:
@@ -176,7 +180,10 @@ remarkably accurate.
 ---
 
 ## Sensors and actuators (Light)
+<!-- .slide: data-background="/images/light.jpg" -->
 
+(CC) <!-- .element: class="attribution" -->
+[ajfisher](http://twitter.com/ajfisher)
 
 Notes:
 
@@ -421,9 +428,7 @@ the anode and it goes in Pin 13 and the short leg goes to ground.
 
 ---
 
-### Ex 1: Load firmata.
-
-- put firmata on the board (gif)
+<!-- .slide: data-background-video="/images/flash.mp4" data-background-video-loop="true" -->
 
 Notes:
 
@@ -576,6 +581,7 @@ Build the circuits then play with them a bit and see what you can do.
 ---
 
 ## Ex 3: Data Acquisition
+<!-- .slide: data-background="/images/data.png" -->
 
 // examples
 
