@@ -394,7 +394,7 @@ don't keep up for whatever reason.
 
 ---
 
-### Exercise 1: Hello World
+### Ex 1: Hello World
 <!-- .slide: data-background="/images/hello_world.jpg" -->
 
 (CC) Flickr <!-- .element: class="attribution" -->
@@ -409,7 +409,7 @@ Hardware often doesn't have a screen so hello world is blinking an LED.
 
 ---
 
-### Exercise 1: Circuit
+### Ex 1: Circuit
 
 ![](images/led.svg)<!-- .element width="45%" style="border: none !important;" -->
 
@@ -421,7 +421,7 @@ the anode and it goes in Pin 13 and the short leg goes to ground.
 
 ---
 
-### Exercise 1: Load firmata.
+### Ex 1: Load firmata.
 
 - put firmata on the board (gif)
 
@@ -437,7 +437,7 @@ That should all load as you can see me doing here.
 
 ---
 
-### Exercise 1: JS Code.
+### Ex 1: JS Code.
 
 ```
 var five = require("johnny-five");
@@ -460,7 +460,7 @@ in the repo. Explain code here.
 
 ---
 
-### Exercise 1: Run
+### Ex 1: Run
 
 ```
 node 1_hello_world/led.js
@@ -472,25 +472,106 @@ Now run node and you should get a nice blinking LED.
 
 ---
 
-## Exercise 2: Information radiators
+## Ex 2: Information radiators
 <!-- .slide: data-background="/images/info_radiator.jpg" -->
 
 Notes:
 
-Now everyone has  
+Now everyone has done that we're going to work through a couple more slightly 
+self directed exercises for the remainder of the time. The first is creating an
+information radiator. This is a class of device that takes inforamtion from a
+service and then radiates it outwards into the environment.
 
+For example taking weather data and displaying a light like this.
 
+There are heaps of things you can make and it's really a case of what api can
+you connect to and what can you make it do.
 
-api connected thing (40 mins)
-- outline - connect an actuator to the web called an information radiator
-- discuss egs - twitter light, gmail indicator, weather forecast, sales simulator
-- walk through sales example 
-  - emits event when there's a sale
-  - respond and light up when that happens
-- highlight code for others
+---
 
+### Ex 2: Examples
 
+* Gmail notifier
+* Twitter keyword light
+* Weather forecast
 
+Notes:
+
+In the repo in exercise 2 there are 3 examples I've made you can play with or,
+if you know an API really well then you can build your own.
+
+The Gmail notifier goes and counts your undread email and uses a servo to indicate
+if you have lots or few unread threads.
+
+The twitter light pulses every time a keyword comes up in the public stream
+
+And the weather forecast looks at the BOM and then displays a coloured light
+to tell you how warm or cold the next several hours are going to be.
+
+---
+
+### Ex 2: Weather code
+
+```
+var five = require("johnny-five");
+var Twitter = require("twitter");
+
+var twitter_creds = require ("./access.js");
+var board = new five.Board();
+var led;
+var keyword = "robot";
+
+if (process.argv[2] == undefined) {
+    console.log("Using keyword 'robot', pass a keyword next time");
+} else {
+    keyword = process.argv[2];
+    console.log("Tracking keyword: %s", keyword);
+}
+
+board.on("ready", function() {
+    led = new five.Led({pin: 9});
+});
+
+var client = new Twitter({
+    consumer_key: twitter_creds.TWITTER_CONSUMER_KEY,
+    consumer_secret: twitter_creds.TWITTER_CONSUMER_SECRET,
+    access_token_key: twitter_creds.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: twitter_creds.TWITTER_ACCESS_TOKEN_SECRET,
+});
+
+client.stream('statuses/filter', {track: keyword }, function(stream) {
+
+    stream.on("data", function(tweet) {
+        if (board.isReady) {
+            led.fade({
+                easing: "linear",
+                duration: 1000,
+                cuePoints: [0, 0.7, 1],
+                keyFrames: [0, 255, 0],
+            });
+            console.log("---");
+            console.log(tweet.text);
+        }
+    });
+
+    stream.on("error", function(error) {
+        console.log(error);
+    });
+});
+```
+
+Notes:
+
+This is the twitter example as it's pretty tiny. As you can see it creates a board
+does the twitter authentication and then basically tracks a keyword and every
+time the data event fires, it then does a fade animation which lasts a second
+and fades the LED in from off to on and off again.
+
+So we'll spend the next 30 minutes playing with these so choose one you want to
+do. Twitter and Gmail are good if you use those services as you'll need to auth
+them. Weather is good if you don't.
+
+Build the circuits then play with them a bit and see what you can do.
 
 ---
 
@@ -515,7 +596,7 @@ api connected thing (40 mins)
 ## Get involved
 
 * NodeBots nights - 1st Wednesday every month
-* CCHS / Mack Melbourne - across the road
+* CCHS / Hack Melbourne - across the road
 * gitter.im/rwarldon/johnny-five
 
 ---
