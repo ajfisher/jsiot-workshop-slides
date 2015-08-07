@@ -199,7 +199,7 @@ of info on every component ever made.
 
 ---
 
-### JS <3 Robotics
+### JS ❤ Robotics
 <!-- .slide: data-background="/images/robot_love.jpg" -->
 
 (CC) Flickr <!-- .element: class="attribution" -->
@@ -437,7 +437,7 @@ That should all load as you can see me doing here.
 
 ---
 
-### Ex 1: JS Code.
+### Ex 1: JS Code
 
 ```
 var five = require("johnny-five");
@@ -575,12 +575,33 @@ Build the circuits then play with them a bit and see what you can do.
 
 ---
 
-## Exercise 3: data acquisition (30 mins)
-- outline - connect a sensor to the web
-  - data
-  - destination
-- discuss egs - light and temperature sensors using phant
-- walk through example of temperature sensor and logging data and visualising it.
+## Ex 3: Data Acquisition
+
+// examples
+
+Notes:
+
+Okay, now we're going to flip the focus around and look at how we connect a thing
+and push data to the internet. Obviously a huge part of IoT is getting data out
+of the environment.
+
+---
+
+### Ex 3: Examples
+
+* Light
+* Temperature
+
+Notes:
+
+So in this case we have two examples, the light sensor records data and pushes it
+out to a visualisation in realtime using D3.
+
+The temperature sensor uses a nodejs library called phant which records data for 
+retrieval later.
+
+Again, jump into the examples and there's circuit diagrams and code examples in
+the folders.
 
 ---
 
@@ -590,6 +611,10 @@ Build the circuits then play with them a bit and see what you can do.
 * node-ardx.org
 * nodebotsau.io
 * @nodebotsau
+
+Notes:
+
+So if you want to do more and look for more info, here's some places to do so.
 
 --- 
 
@@ -609,7 +634,4 @@ DDD, August 8, 2015 <!-- .element: class="location" -->
 Andrew Fisher @ajfisher<!-- .element: class="author" -->
 
 Notes:
-
-Objective 2min
-- intro to building web connected things
 
