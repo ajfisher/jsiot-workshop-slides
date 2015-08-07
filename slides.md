@@ -35,6 +35,9 @@ and doing things with it.
 ## Where are the droids?
 <!-- .slide: data-background="/images/droids.jpg" -->
 
+(CC) Flickr <!-- .element: class="attribution" -->
+[⣫⣤⣇⣤](http://www.flickr.com/photos/donsolo/3768623542/)
+
 Notes:
 
 Now, for those that might know a bit about nodebots or have been to a nodebots session before, whilst we're
@@ -50,9 +53,11 @@ security workshop or learn about APIs.
 
 ---
 
-## Introduction to electronics
+## Intro to electronics
+<!-- .slide: data-background="/images/electronics.jpg" -->
 
-// some sort of pic
+(CC) <!-- .element: class="attribution" -->
+[ajfisher](http://twitter.com/ajfisher)
 
 Notes:
 
@@ -66,7 +71,11 @@ today and where to find out more.
 
 ## Voltage, Current, Resistance
 
-// Use image that is the pipes analogy
+![](images/water-tank.jpg)
+
+(C) <!-- .element: class="attribution" -->
+[Tinkernow](http://http://tinkernow.com/)
+
 
 Notes:
 
@@ -92,8 +101,10 @@ resistor to restrict the flow.
 ---
 
 ### Microcontrollers
+<!-- .slide: data-background="/images/arduino_nano.jpg" -->
 
-// pic of arduino
+(CC) <!-- .element: class="attribution" -->
+[Phil Farugia](#)
 
 Notes:
 
@@ -108,8 +119,10 @@ interact with it in JS and we'll come to that in a moment.
 ---
 
 ### Breadboard
+<!-- .slide: data-background="/images/breadboard.jpg" -->
 
-// pic of breadboard
+(CC) <!-- .element: class="attribution" -->
+[ajfisher](http://twitter.com/ajfisher)
 
 Notes:
 
@@ -121,6 +134,10 @@ allows you to make mistakes.
 ---
 
 ### Sensors and actuators (LEDs)
+<!-- .slide: data-background="/images/leds.jpg" -->
+
+(CC) <!-- .element: class="attribution" -->
+[ajfisher](http://twitter.com/ajfisher)
 
 Notes:
 
@@ -133,6 +150,10 @@ Note that LEDs are polar so the long leg is the anode or the positive side.
 
 ---
 ## Sensors and actuators (Motors)
+<!-- .slide: data-background="/images/servo.jpg" -->
+
+(CC) <!-- .element: class="attribution" -->
+[ajfisher](http://twitter.com/ajfisher)
 
 
 Notes:
@@ -390,7 +411,7 @@ Hardware often doesn't have a screen so hello world is blinking an LED.
 
 ### Exercise 1: Circuit
 
-- LED Circuit
+![](images/led.svg)<!-- .element width="45%" style="border: none !important;" -->
 
 Notes:
 
@@ -419,7 +440,17 @@ That should all load as you can see me doing here.
 ### Exercise 1: JS Code.
 
 ```
-- show code example.
+var five = require("johnny-five");
+
+var board = new five.Board();
+
+board.on("ready", function() {
+
+    var led = five.Led({pin:13});
+
+    led.blink(1000);
+
+});
 ```
 
 Notes:
@@ -441,13 +472,25 @@ Now run node and you should get a nice blinking LED.
 
 ---
 
-## Exercise 2: api connected thing (40 mins)
+## Exercise 2: Information radiators
+<!-- .slide: data-background="/images/info_radiator.jpg" -->
+
+Notes:
+
+Now everyone has  
+
+
+
+api connected thing (40 mins)
 - outline - connect an actuator to the web called an information radiator
 - discuss egs - twitter light, gmail indicator, weather forecast, sales simulator
 - walk through sales example 
   - emits event when there's a sale
   - respond and light up when that happens
 - highlight code for others
+
+
+
 
 ---
 
