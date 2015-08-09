@@ -5,6 +5,8 @@ DDD, August 8, 2015 <!-- .element: class="location" -->
 
 Andrew Fisher @ajfisher<!-- .element: class="author" -->
 
+Press 'S' for full notes<!-- .element: class="instruction" -->
+
 Notes:
 
 Hi, my name is Andrew Fisher and I'm an interaction developer and I also build
