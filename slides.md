@@ -17,6 +17,12 @@ world using JS.
 
 ---
 
+## workshop repository
+
+http://github.com/ajfisher/dddworkshop
+
+---
+
 ## TODO
 
 1. Introduction to electronics & JS hardware stack
