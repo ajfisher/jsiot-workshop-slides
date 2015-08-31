@@ -1,13 +1,14 @@
 # Workshop:<br/> Web Connected Physical things with JavaScript
 <!-- .slide: class="title" -->
 
-DDD, August 8, 2015 <!-- .element: class="location" -->
+JS IOT Workshop <!-- .element: class="location" -->
 
 Andrew Fisher @ajfisher<!-- .element: class="author" -->
 
-Press 'S' for full notes<!-- .element: class="instruction" -->
 
 Notes:
+
+Press 'S' for full notes -- .element: class="instruction" --
 
 Hi, my name is Andrew Fisher and I'm an interaction developer and I also build
 hardware using JavaScript. Our workshop today is going to go for the two
@@ -19,7 +20,7 @@ world using JS.
 
 ## workshop repository
 
-http://github.com/ajfisher/dddworkshop
+http://github.com/ajfisher/jsiot-workshop
 
 ---
 
@@ -396,7 +397,7 @@ LED panels.
 
 ## Exercises:
 
-github.com/ajfisher/dddworkshop<!-- .element class="bigtext" -->
+github.com/ajfisher/jsiot-workshop<!-- .element class="bigtext" -->
 
 Notes:
 
@@ -630,20 +631,12 @@ Notes:
 
 So if you want to do more and look for more info, here's some places to do so.
 
---- 
-
-## Get involved
-
-* NodeBots nights - 1st Wednesday every month
-* CCHS / Hack Melbourne - across the road
-* gitter.im/rwarldon/johnny-five
-
 ---
 
 # Workshop:<br/> Web Connected Physical things with JavaScript
 <!-- .slide: class="title" -->
 
-DDD, August 8, 2015 <!-- .element: class="location" -->
+JSIOT workshop <!-- .element: class="location" -->
 
 Andrew Fisher @ajfisher<!-- .element: class="author" -->
 
